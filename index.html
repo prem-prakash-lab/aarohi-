@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Aarohi!</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: pink;
+    }
+    
+    h1 {
+      color: #ff5252;
+      font-family: 'Georgia', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .birthday-image {
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      border: 10px solid #ccc;
+      border-radius: 10px;
+    }
+    
+    .footer {
+      margin-top: 50px;
+      color: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer img {
+      min-width: 25%;
+      max-height: 300px;
+      margin: 10px;
+      opacity: 0;
+      transition: opacity 5s ease-in-out;
+    }
+    
+    .footer img.show {
+      opacity: 1;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .footer img {
+        min-width: 75%;
+        min-height: 400px;
+        max-width: 75%;
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Aarohi!</h1>
+  <p>Dear Aarohi,</p>
+  <p>मैं केवल यह आशा कर सकता हूं कि
+    आपका जन्मदिन उन सभी लोगों और चीजों से भरा हो
+    जो आपको जीवन में आनंद प्रदान करें
+    मेरी प्यारी भांजी को जन्मदिन की बधाई !</p>
+  <div class="frame">
+    <img class="birthday-image" src="data/WhatsApp Image 2023-07-01 at 7.31.06 PM.jpeg" alt="Birthday Image">
+  </div>
+  <p>अपने दिन का पूरा आनंद लें और अद्भुत यादें बनाएं। आपके सारे सपने सच हों!</p>
+  <div class="footer">
+    <img class="animate-image" src="data/WhatsApp Image 2023-07-01 at 7.31.01 PM (1).jpeg" alt="Image 1">
+    <img class="animate-image" src="data/WhatsApp Image 2023-07-01 at 7.31.01 PM.jpeg" alt="Image 2">
+    <img class="animate-image" src="data/WhatsApp Image 2023-07-01 at 7.31.02 PM.jpeg" alt="Image 3">
+    <img class="animate-image" src="data/WhatsApp Image 2023-07-01 at 7.31.05 PM.jpeg" alt="Image 4">
+    <img class="animate-image" src="data/WhatsApp Image 2023-07-01 at 7.31.06 PM.jpeg" alt="Image 5">
+  </div>
+
+  <audio src="./data/Baar Baar Din Yeh Aaye  no names without Sunita  Happy Birthday  Sonu Nigam Shifa Asgarali (1).mp3" autoplay loop></audio>
+  <p>छोटी-सी थी तू एक दिन
+    आज धीरे-धीरे चल रही है,
+    मामा की लाडली बिना बताए
+    घर की सैर पर निकल रही है।</p>
+
+  <script>
+    const images = document.querySelectorAll('.animate-image');
+    let index = 0;
+
+    function showImage() {
+      images[index].classList.add('show');
+      index++;
+      if (index < images.length) {
+        setTimeout(showImage, 3000); // Adjust the delay between each image (in milliseconds)
+      }
+    }
+
+    showImage();
+  </script>
+</body>
+</html>
